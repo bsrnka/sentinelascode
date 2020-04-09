@@ -5,7 +5,7 @@
 
 name: build and deploy Sentinel
 variables:
- SubscriptionName: 'My Azure Labs(40e34af6-b858-4a69-8974-d7927628fac0)'
+ SubscriptionName: 'My Azure Labs'
 resources:
  pipelines:
    - pipeline: Scripts
