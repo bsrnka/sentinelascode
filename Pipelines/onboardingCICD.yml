@@ -4,6 +4,8 @@
 # https://aka.ms/yaml
 
 name: build and deploy Sentinel
+variables:
+ SubscriptionName: 'Visual Studio Professional Subscription'
 resources:
  pipelines:
    - pipeline: Scripts
@@ -50,7 +52,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Install Sentinel'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: $(SubscriptionName)
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/InstallSentinel.ps1'
          ScriptArguments: '-OnboardingFile onboarding.json'
          azurePowerShellVersion: LatestVersion
