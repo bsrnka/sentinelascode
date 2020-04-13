@@ -4,8 +4,6 @@
 # https://aka.ms/yaml
 
 name: build and deploy Sentinel
-variables:
- SubscriptionName: 'My Azure Labs'
 resources:
  pipelines:
    - pipeline: Scripts
